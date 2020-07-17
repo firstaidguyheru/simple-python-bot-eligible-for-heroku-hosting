@@ -12,7 +12,7 @@ async def on_ready():
 async def hi_cmd(ctx):
     await ctx.channel.send('hi bot user.')
 
-token = 'NzMwNjY0OTQzMTQ5MzgzNzAx.Xw4Z8Q.86oxd3Cn5mWeaBs1QCEnE8T8rkY'
+token = 'NzMwNjY0OTQzMTQ5MzgzNzAx.XxHnBQ.NSbmzNg44H3mWPbzXcfej5d8oUk'
 
 {
     client.run(token)
