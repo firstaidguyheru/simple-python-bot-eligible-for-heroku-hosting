@@ -12,11 +12,12 @@ async def status():
         await client.change_presence(activity=discord.Game(name='2'))
         await sleep(5)
         await client.change_presence(activity=discord.Game(name='3'))
-        await sleep(5)
+        await sleep(5) ## take off if you want.
+        
 @client.event
 async def on_ready():
     print(f'{client.user} has Awoken!')
-client.loop.create_task(status())
+    await client.loop.create_task(status())
 
 
 @client.command(name='hi', aliases=['Hi'])
@@ -31,7 +32,8 @@ async def on_member_join(member):
         description = f'Welcome {member.mention}, enjoy your stay!'
     )
     await member.send(embed=mbed)
-token = 'NzMwNjY0OTQzMTQ5MzgzNzAx.XxUUSw.mtBvKry3fIlxHInFG4AcMG58fFA'
+    
+token = ''
 
 {
     client.run(token)
