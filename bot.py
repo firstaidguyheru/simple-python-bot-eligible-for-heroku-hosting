@@ -31,7 +31,7 @@ async def hi_cmd(ctx):
 @client.event
 async def on_member_join(member):
     mbed = discord.Embed(
-        colour = (discord.Colour.magenta()),
+        color = discord.Color.magenta(),
         title = 'Welcome Message',
         description = f'Welcome {member.mention}, enjoy your stay!'
     )
