@@ -1,12 +1,12 @@
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 from asyncio import sleep
 
 client = commands.Bot(command_prefix='-', help_command=None)
 
-load_env()
+load_dotenv()
 
 async def status():
     while True:
