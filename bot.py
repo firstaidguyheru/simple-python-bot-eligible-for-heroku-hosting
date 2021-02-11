@@ -10,7 +10,6 @@ load_dotenv()
 
 async def status():
     while True:
-        await client.wait_until_ready()
         await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='1'))
         await sleep(60*10)
         await client.change_presence(activity=discord.Game(name='2'))
@@ -20,6 +19,7 @@ async def status():
         
 @client.event
 async def on_ready():
+    await client.wait_until_ready()
     print(f'{client.user} has Awoken!')
     await client.loop.create_task(status())
 
