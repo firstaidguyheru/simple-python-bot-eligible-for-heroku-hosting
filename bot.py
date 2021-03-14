@@ -16,12 +16,13 @@ async def status():
         await sleep(60*10)
         await client.change_presence(activity=discord.Game(name='3'))
         await sleep(60*10) ## take off if you want.
+
+client.loop.create_task(status())
         
 @client.event
 async def on_ready():
     await client.wait_until_ready()
     print(f'{client.user} has Awoken!')
-    await client.loop.create_task(status())
 
 
 @client.command(name='hi', aliases=['Hi'])
